@@ -1,0 +1,19 @@
+{
+  "name": "intellpro-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "client-install": "cd client && npm install",
+    "server-install": "cd server && npm install",
+    "install-all-deps": "concurrently \"npm run server-install\" \"npm run client-install\"",
+    "client-run": "cd client && npm run start",
+    "server-run": "cd server && npm run serve",
+    "project": "concurrently \"npm run client-run\" \"npm run server-run\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.1.0"
+  }
+}
