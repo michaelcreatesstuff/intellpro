@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-mongoose.connect('mongodb://127.0.0.1:27017/parkinglots', { useNewUrlParser: true }).catch((e) => {
+mongoose.connect(process.env.MONGODB_CONNECTION_STRING, { useNewUrlParser: true }).catch((e) => {
   console.error('Connection error', e.message);
 });
 

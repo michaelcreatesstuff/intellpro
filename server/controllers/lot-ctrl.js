@@ -63,6 +63,7 @@ createLot = (req, res) => {
 
 createOrUpdateLotString = (req, res) => {
   const body = req.body;
+  console.log('body', body);
   const id = req?.params?.id.toString();
   if (!body) {
     return res.status(400).json({
