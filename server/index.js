@@ -18,13 +18,13 @@ app.use(function (req, res, next) {
 });
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/api', router);
 app.use(express.static(path.resolve(__dirname, '../client/build')));
 app.get('*', function (request, response) {
   response.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
 
-app.use(bodyParser.urlencoded({ extended: true }));
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
+  "proxy": "http://localhost:5000",
   "scripts": {
     "server-install": "cd server && npm install",
     "client-install": "cd client && npm install",
