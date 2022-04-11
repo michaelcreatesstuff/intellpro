@@ -5,13 +5,13 @@
   "main": "src/index.js",
   "scripts": {
     "server-install": "cd server && npm install",
+    "client-install": "cd client && npm install",
     "install-all-deps": "concurrently \"npm run server-install\" \"npm run client-install\"",
     "client": "cd client && npm run start",
     "server": "cd server && npm run serve",
     "project": "concurrently \"npm run client-run\" \"npm run server\"",
     "build": "cd client && npm run build",
-    "install-client": "cd client && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build",
+    "heroku-postbuild": "npm run install-all-deps && npm run build",
     "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   },
