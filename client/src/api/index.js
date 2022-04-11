@@ -5,9 +5,9 @@ const api = axios.create({
 });
 
 export const createOrUpdateLotString = async (id, payload) =>
-  await api.post(`/lotString/${id}`, payload);
-export const getLotsStringsIds = async () => await api.get(`/lotStringsIds`);
-export const getLotStringById = async (id) => await api.get(`/lotString/${id}`);
+  await api.post(`/api/lotString/${id}`, payload);
+export const getLotsStringsIds = async () => await api.get(`/api/lotStringsIds`);
+export const getLotStringById = async (id) => await api.get(`/api/lotString/${id}`);
 
 const apis = {
   createOrUpdateLotString,
